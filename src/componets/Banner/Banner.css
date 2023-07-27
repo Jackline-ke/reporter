@@ -1,0 +1,25 @@
+.banner{
+    margin-top: 60px;
+}
+.bannerTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora';
+}
+.bannerTitleSm{
+    position: absolute;
+    top: 22%;
+    font-size: 20px;
+}
+.bannerTitleLg{
+    position: absolute;
+    top: 23%;
+    font-size: 100px;
+}
+.bannerImage{
+    width: 100%;
+    height: 450px;
+    margin-top: 80px;
+    object-fit: cover;
+}

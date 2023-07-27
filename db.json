@@ -1,0 +1,19 @@
+{
+    "slides": [
+      {
+        "id": 1,
+        "image" : "https://i.pinimg.com/236x/81/b9/45/81b945ed90599b92bf126ec0854561c0.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "id": 2,
+        "image" : "https://i.pinimg.com/236x/d1/84/7d/d1847df2fb85bf5c0d6838199717123c.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."  
+      },
+      {
+        "id": 3,
+        "image" : "https://i.pinimg.com/236x/b6/58/4a/b6584a055bbddf5e23d847668a79df7f.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."  
+      }
+    ]
+}
