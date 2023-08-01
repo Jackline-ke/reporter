@@ -1,6 +1,6 @@
 import React from 'react'
 import './Banner.css'
-import cor1 from "../../assets/cor2.jpg"
+import cor6 from "../../assets/cor6.png"
 
 
 const Banner = () => {
@@ -10,7 +10,7 @@ const Banner = () => {
             <span className='bannerTitleSm'>Let's stop</span>
             <span className='bannerTitleLg'>Corruption</span>
         </div>
-        <img className='bannerImage' src={cor1} alt="Banner"/>
+        <img className='bannerImage' src={cor6} alt="Banner"/>
     </div>
   )
 }
