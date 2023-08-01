@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 import {FaBars, FaTimes} from "react-icons/fa"
 function Navbar(){
@@ -16,9 +16,9 @@ function Navbar(){
             {/* menu */}
             <div className="ml-32">
                 <ul className="hidden md:flex">
-                    <li>Home</li>
-                    <li>Posts</li>
-                    <li>Blogs</li>
+                    <Link to='/'><li>Home</li></Link>
+                    <Link to='/Post'><li>Posts</li></Link>
+                    <Link to='/Write'> <li>Write</li></Link>
                 </ul>
             </div>
             <div>
@@ -35,7 +35,7 @@ function Navbar(){
                 <ul className= {!navbar ? 'hidden' : "absolute top-0 left-0 w-full h-screen bg-[#FF1212] flex flex-col justify-center items-center"}>
                     <li className="py-6 text-4xl">Home</li>
                     <li className="py-6 text-4xl">Posts</li>
-                    <li className="py-6 text-4xl">Blogs</li>
+                    <li className="py-6 text-4xl">write</li>
                 </ul>
             </div>
             <div className="border-t-2 border-gray-100 mt-8"></div>

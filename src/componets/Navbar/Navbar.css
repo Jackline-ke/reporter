@@ -3,10 +3,11 @@
     height: 80px;
     /* position: sticky; */
     top: 0;
+    /* z-index: 1; */
 }
 .logo{
     font-size: 1.3rem;
     font-weight: bold;
     font-family: "Praise";
     color: #FF1212;
-}
+} 

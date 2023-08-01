@@ -1,0 +1,28 @@
+#fileInput{
+    display: none;
+}
+.writeImg{
+    width: 90vw;
+}
+
+.writeFormGroup{
+    position: relative;
+}
+
+.writeInput{
+    font-size: 30px;
+    padding: 20px;
+    width: 70vw;
+
+}
+.writeInput:focus{
+    outline: none;
+}
+.writeText{
+    font-size: 20px;
+}
+.writeSubmit{
+    position: absolute;
+    top: 100px;   
+    margin-left: 20px;  
+}
