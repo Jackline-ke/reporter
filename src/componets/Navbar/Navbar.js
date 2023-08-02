@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
-import {FaBars, FaTimes} from "react-icons/fa"
+import {FaBars, FaSearch} from "react-icons/fa"
+import profile from "../../assets/pro.jpg"
 function Navbar(){
     const [navbar, setNavbar] = useState(false)
     const handleClick = () => setNavbar(!navbar)
 
     return(
         <div id="navbar">
-            <div className="flex justify-between items-center pt-4 font-serif">
+            <div className="flex justify-between items-center pt-4 font-serif bg-black text-white h-20">
             <div className="ml-16">
                 <h1 className="logo">IReporter</h1>
             </div>
@@ -22,8 +23,9 @@ function Navbar(){
                     <Link to='/logout'> <li>Logout</li></Link>
                 </ul>
             </div>
-            <div>
-                <button className="bg-white text-black w-32 p-2 rounded-full hover:bg-black hover:text-white drop-shadow-2xl">Sign up</button>
+            <div className="navRight flex justify-center items-center">
+                <img className="navImage cursor-pointer " src={profile} alt="Profile"/>
+                <FaSearch className="navSearch ml-8 cursor-pointer" />
             </div>
 
             {/* Humburger */}
@@ -43,7 +45,6 @@ function Navbar(){
             <div className="border-t-2 border-gray-100 mt-8"></div>
 
         </div>
-        <div className="w-full h-1 bg-[#ff1212] mt-6"></div>
         </div>
     )
 }
