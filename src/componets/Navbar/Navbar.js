@@ -17,8 +17,9 @@ function Navbar(){
             <div className="ml-32">
                 <ul className="hidden md:flex">
                     <Link to='/'><li>Home</li></Link>
-                    <Link to='/Post'><li>Posts</li></Link>
-                    <Link to='/Write'> <li>Write</li></Link>
+                    <Link to='/write'><li>Write</li></Link>
+                    <Link to='/aboutUs'> <li>About Us</li></Link>
+                    <Link to='/logout'> <li>Logout</li></Link>
                 </ul>
             </div>
             <div>
@@ -34,8 +35,9 @@ function Navbar(){
             <div className="">
                 <ul className= {!navbar ? 'hidden' : "absolute top-0 left-0 w-full h-screen bg-[#FF1212] flex flex-col justify-center items-center"}>
                     <li className="py-6 text-4xl">Home</li>
-                    <li className="py-6 text-4xl">Posts</li>
-                    <li className="py-6 text-4xl">write</li>
+                    <li className="py-6 text-4xl">Write</li>
+                    <li className="py-6 text-4xl">About Us</li>
+                    <li className="py-6 text-4xl">Logout</li>
                 </ul>
             </div>
             <div className="border-t-2 border-gray-100 mt-8"></div>
