@@ -4,7 +4,7 @@ import './Sidebar.css'
 
 const Sidebar = () => {
   return (
-    <div className='sidebar'>
+    <div className='sidebar h-fit'>
         <div className='sidebarItem'>
             <span className='sidebarTitle'>IReporter</span>
             <img src={cor3} alt="IReporter" />

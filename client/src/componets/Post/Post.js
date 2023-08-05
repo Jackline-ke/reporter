@@ -11,7 +11,7 @@ const Post = () => {
       </div>
       <div className='postInfo flex flex-col justify-center items-center'>
         <div className='postCats mt-4'>
-          <span className='postCat font-serif text-[#ff1212]'>Fraud</span>
+          <span className='postCat font-serif text-[#a7a4a4]'>Fraud</span>
         </div>
         <span className='postTitle font-serif text-xl font-semibold cursor-pointer'>Corruption</span>
         <hr className='w-48'/>

@@ -6,10 +6,11 @@ import profile from "../../assets/pro.jpg"
 function Navbar(){
     const [navbar, setNavbar] = useState(false)
     const handleClick = () => setNavbar(!navbar)
+    const user = false;
 
     return(
         <div id="navbar">
-            <div className="flex justify-between items-center pt-4 font-serif bg-black text-white h-20">
+            <div className="flex justify-between items-center pt-4 font-serif bg-gray-500 text-black h-20">
             <div className="ml-16">
                 <h1 className="logo">IReporter</h1>
             </div>
@@ -17,14 +18,23 @@ function Navbar(){
             {/* menu */}
             <div className="ml-32">
                 <ul className="hidden md:flex">
-                    <Link to='/'><li>Home</li></Link>
-                    <Link to='/write'><li>Write</li></Link>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/write'>Write</Link></li>
                     <Link to='/aboutUs'> <li>About Us</li></Link>
-                    <Link to='/logout'> <li>Logout</li></Link>
+                    <li>{user && "Logout"}</li>
                 </ul>
             </div>
             <div className="navRight flex justify-center items-center">
+               {
+                user ? ( 
                 <img className="navImage cursor-pointer " src={profile} alt="Profile"/>
+                ) :(
+                    <>
+                        <Link to='/login' className="font-bold">Login</Link>
+                        <Link to='/register' className="ml-8 font-bold">Register</Link>
+                    </>
+                )
+               }
                 <FaSearch className="navSearch ml-8 cursor-pointer" />
             </div>
 

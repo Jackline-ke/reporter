@@ -6,7 +6,7 @@ import './Banner.css'
 const Banner = () => {
   return (
     <div className='banner'>
-        <div className='relative bg-gradient-to-tr from-purple-600 to-green-600 w-full h-screen'>
+        <div className='relative bg-gradient-to-tr from-black to-gray-500 w-full h-screen'>
           <img src='https://i.pinimg.com/564x/c7/f9/33/c7f933ad7d6f7c0d7b1e5ec28d7a7255.jpg' className='absolute mix-blend-overlay h-full w-full object-cover'/>
           
         </div>
