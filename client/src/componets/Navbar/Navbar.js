@@ -1,16 +1,23 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 import {FaBars, FaSearch} from "react-icons/fa"
-import profile from "../../assets/pro.jpg"
+// import profile from "../../assets/pro.jpg"
+import { Context } from "../../context/Context";
+
+
 function Navbar(){
     const [navbar, setNavbar] = useState(false)
     const handleClick = () => setNavbar(!navbar)
-    const user = false;
+    const {user, dispatch} = useContext(Context)
+
+    const handleLogout = () =>{
+        dispatch({type: "LOGOUT"})
+    }
 
     return(
         <div id="navbar">
-            <div className="flex justify-between items-center pt-4 font-serif bg-gray-500 text-black h-20">
+            <div className="flex justify-between items-center pt-4 font-serif text-black h-20">
             <div className="ml-16">
                 <h1 className="logo">IReporter</h1>
             </div>
@@ -18,16 +25,18 @@ function Navbar(){
             {/* menu */}
             <div className="ml-32">
                 <ul className="hidden md:flex">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/write'>Write</Link></li>
-                    <Link to='/aboutUs'> <li>About Us</li></Link>
-                    <li>{user && "Logout"}</li>
+                    <li><Link to='/'>HOME</Link></li>
+                    <li><Link to='/write'>WRITE</Link></li>
+                    <Link to='/aboutUs'> <li>ABOUT US</li></Link>
+                   <li onClick={handleLogout}>{user && "LOGOUT"}</li>
                 </ul>
             </div>
             <div className="navRight flex justify-center items-center">
                {
                 user ? ( 
-                <img className="navImage cursor-pointer " src={profile} alt="Profile"/>
+                    <Link to="/settings">
+                        <img className="navImage cursor-pointer " src={user.profilePicture} alt="Profile"/>
+                    </Link>
                 ) :(
                     <>
                         <Link to='/login' className="font-bold">Login</Link>
@@ -35,7 +44,7 @@ function Navbar(){
                     </>
                 )
                }
-                <FaSearch className="navSearch ml-8 cursor-pointer" />
+                {/* <FaSearch className="navSearch ml-8 cursor-pointer" /> */}
             </div>
 
             {/* Humburger */}
@@ -46,7 +55,7 @@ function Navbar(){
             {/* mobile */}
             <div className="">
                 <ul className= {!navbar ? 'hidden' : "absolute top-0 left-0 w-full h-screen bg-[#FF1212] flex flex-col justify-center items-center"}>
-                    <li className="py-6 text-4xl">Home</li>
+                    <li className="py-6 text-4xl"><Link to="/">Home</Link></li>
                     <li className="py-6 text-4xl">Write</li>
                     <li className="py-6 text-4xl">About Us</li>
                     <li className="py-6 text-4xl">Logout</li>

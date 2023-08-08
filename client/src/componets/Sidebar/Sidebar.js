@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState }  from 'react'
+import axios from 'axios'
 import cor3 from '../../assets/cor3.jpeg'
 import './Sidebar.css'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
+    const [cats, setCats] = useState([]);
+
+    useEffect(() =>{
+        const getCats = async () =>{
+            const res = await axios.get("http://localhost:5000/api/categories")
+            setCats(res.data)
+        }
+        getCats();
+    }, [])
   return (
     <div className='sidebar h-fit'>
         <div className='sidebarItem'>
@@ -16,12 +27,10 @@ const Sidebar = () => {
         <div className='sidebarItem'>
             <span className='sidebarTitle'>CATEGORIES</span>
             <ul className='sidebarList font-serif grid grid-cols-2 gap-2'>
-                <li className='sideListItem font-light'>Road</li>
-                <li className='sideListItem font-light'>NYS</li>
-                <li className='sideListItem font-light'>Fraud</li>
-                <li className='sideListItem font-light'>Road</li>
-                <li className='sideListItem font-light'>NYS</li>
-                <li className='sideListItem font-light'>Fraud</li>
+                {cats.map((c) =>{
+                    <Link to={`/?cat=${c.name}`}><li className='sideListItem font-light'>{c.name}</li></Link>
+                   
+                })}
             </ul>
         </div>
     </div>

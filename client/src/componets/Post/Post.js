@@ -1,33 +1,29 @@
 import React from 'react'
-// import { Link } from 'react-scroll'
-import cor1 from '../../assets/cor1.jpeg'
+import { Link } from 'react-router-dom'
 import './Post.css'
 
-const Post = () => {
+const Post = ({post}) => {
+  const PF = "http://localhost:5000/images/"
   return (
     <div className='post'>
       <div className='flex justify-center items-center'>
-        <img  src={cor1} alt='post' className='rounded-md cursor-pointer' /> 
+        {post.photo && 
+        <img  src={PF + post.photo} alt='post' className='rounded-md cursor-pointer' /> }
       </div>
       <div className='postInfo flex flex-col justify-center items-center'>
         <div className='postCats mt-4'>
-          <span className='postCat font-serif text-[#a7a4a4]'>Fraud</span>
+          {post.categories.map((c) =>(
+            <span className='postCat font-serif text-[#a7a4a4]'>{c.name}</span>
+          ))}
+          
         </div>
-        <span className='postTitle font-serif text-xl font-semibold cursor-pointer'>Corruption</span>
+        
+        <Link to={`/post/${post._id}`}> <span className='postTitle font-serif text-xl font-semibold cursor-pointer'>{post.title}</span></Link>
+       
         <hr className='w-48'/>
-        <span className='postDate font-thin text-sm'>1 hour ago</span>
+        <span className='postDate font-thin text-sm'>{new Date(post.createdAt).toDateString()}</span>
       </div>
-      <p className='postDesc p-4'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-      officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <p className='postDesc p-4'>{post.desc}</p>
 
     </div>
   )

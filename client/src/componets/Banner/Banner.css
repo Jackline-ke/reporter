@@ -23,3 +23,30 @@
     margin-top: 80px;
     object-fit: cover;
 } */
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.homepage{
+    background: radial-gradient(#fff, #bbbaba);
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 h1{
+    padding-left: 100px;
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+  }
+  .col-2 p{
+    padding-left: 100px;
+  }
+  .col-2 img{
+    max-width: 100%;
+    padding: 50px;
+  }

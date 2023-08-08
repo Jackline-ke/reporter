@@ -1,16 +1,27 @@
 import React from 'react'
 import './Banner.css'
-// import cor6 from "../../assets/cor6.png"
+import {banner} from "../../assets/banner.png"
+
 
 
 const Banner = () => {
   return (
-    <div className='banner'>
-        <div className='relative bg-gradient-to-tr from-black to-gray-500 w-full h-screen'>
-          <img src='https://i.pinimg.com/564x/c7/f9/33/c7f933ad7d6f7c0d7b1e5ec28d7a7255.jpg' className='absolute mix-blend-overlay h-full w-full object-cover'/>
-          
+    <div className='row-container font-serif'>
+            <div className='row'>
+                <div className='col-2'>
+                <h1>Lorem ipsum dolor sit amet <br />Consectetur adipiscing elit</h1>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                   ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                   in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+            </div>
+            <div className='col-2'>
+                <img src={banner} alt='image' width={400} height={440}/>
+            </div>
+            
         </div>
-    </div>
+
+        </div>
   )
 }
 

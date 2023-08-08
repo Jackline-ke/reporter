@@ -3,6 +3,7 @@
     height: 80px;
     /* position: sticky; */
     top: 0;
+    border-bottom: 1px solid #FF1212;
     /* z-index: 1; */
 }
 .logo{

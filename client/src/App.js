@@ -1,16 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './componets/Navbar/Navbar';
 import Home from './pages/Home';
-import { PostsPage } from './pages/PostPage';
 import Single from './pages/Single/Single';
 import Register from './pages/Register/Register';
 import Write from './pages/Write/Write';
 import Login from './pages/Login/Login';
 import Settings from './pages/Settings/Settings';
+import { useContext } from 'react';
+import { Context } from './context/Context';
+// import axios from "axios" 
 
 
 function App() {
-  const user = false;
+  const {user} = useContext(Context)
+  
   return (
     <div className="App">
       <Router>

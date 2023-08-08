@@ -13,4 +13,31 @@
     font-weight: 600px;
     font-size: 30px;
 }
-
+.singlePostTitleInput{
+    margin: 10px;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+.singlePostTitleInput:focus{
+    outline: none;
+}
+.singlePostDescInput{
+    margin: 10px;
+    font-size: 28px;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+}
+.singlePostDescInput:focus{
+    outline: none;
+}
+.singlePostButton{
+    width: 100px;
+    color: white;
+    border: none;
+    background-color: #ff1212;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
