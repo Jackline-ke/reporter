@@ -20,7 +20,8 @@
     outline: none;
 }
 .writeText{
-    font-size: 20px;
+    font-size: 15px;
+    height: max-content;
 }
 .writeSubmit{
     position: absolute;

@@ -20,8 +20,8 @@ const Post = ({post}) => {
         
         <Link to={`/post/${post._id}`}> <span className='postTitle font-serif text-xl font-semibold cursor-pointer'>{post.title}</span></Link>
        
-        <hr className='w-48'/>
-        <span className='postDate font-thin text-sm'>{new Date(post.createdAt).toDateString()}</span>
+        <hr className='w-48 mt-4'/>
+        <span className='postDate font-thin text-sm mt-2'>{new Date(post.createdAt).toDateString()}</span>
       </div>
       <p className='postDesc p-4'>{post.desc}</p>
 
