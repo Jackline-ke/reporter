@@ -1,9 +1,10 @@
 import Posts from '../Posts/Posts'
-import Sidebar from '../Sidebar/Sidebar'
+// import Sidebar from '../Sidebar/Sidebar'
 import './Landing.css'
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { useLocation } from 'react-router-dom'
+import About from '../About/About'
 
 const Landing = () => {
   const [posts, setPosts] = useState([]);
@@ -30,8 +31,9 @@ const Landing = () => {
 
   return (
     <div className='landing'>
-        <Posts posts={posts} />
-        <Sidebar />
+      <About />
+      <Posts posts={posts} />
+      {/* <Sidebar /> */}
     </div>
   )
 }
